@@ -1,8 +1,12 @@
+import "./Input.css";
+
 export default function Input({ text }) {
   return (
     <>
-      <label htmlFor={text}>{text}</label>
-      <input id={text} type="text" name={text}></input>
+      <label className="label_motto" htmlFor={text}>
+        {text}
+      </label>
+      <input className="input_motto" id={text} type="text" name={text}></input>
     </>
   );
 }

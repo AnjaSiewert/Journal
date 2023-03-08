@@ -1,20 +1,21 @@
-.header {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 18px 16px;
   gap: 10px;
+
   width: 368px;
-  height: 54px;
-  background: #e4e8f0;
+  height: 56px;
+
+  /* granite */
+
+  background: #252629;
+
+  /* Inside auto layout */
+
   flex: none;
   order: 0;
-  align-self: stretch;
   flex-grow: 0;
-}
-
-.header__heading {
-  text-transform: uppercase;
-  text-align: center;
 }
