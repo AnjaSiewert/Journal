@@ -1,0 +1,10 @@
+.icon-button {
+  background-color: transparent;
+  border: none;
+}
+
+.icon-button svg {
+  width: 25px;
+  height: 25px;
+  display: inline;
+}
