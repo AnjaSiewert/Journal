@@ -1,7 +1,9 @@
-export default function Tab({ text }) {
+import "./Tab.css";
+
+export default function Tab({ children, isActive }) {
   return (
-    <>
-      <li>{text}</li>
-    </>
+    <button className={`tab${isActive ? " tab--active" : ""}`}>
+      {children}
+    </button>
   );
 }

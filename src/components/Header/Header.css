@@ -1,20 +1,12 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 16px;
-  gap: 10px;
-  width: 368px;
-  height: 54px;
-  background: #e4e8f0;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  background: var(--color-water-10);
+  padding: 16px 18px;
 }
 
-.header__heading {
+.header__title {
+  margin: 0;
+  font-size: 16px;
   text-transform: uppercase;
+  font-weight: bold;
   text-align: center;
 }

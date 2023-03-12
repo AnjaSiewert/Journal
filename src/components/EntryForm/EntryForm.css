@@ -1,21 +1,42 @@
-.EntryForm {
+.entry-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0 10%;
+  gap: 24px;
 }
 
-.EntryForm__fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 0.5rem;
-}
-
-.EntryForm__header {
+.entry-form__title {
   text-transform: uppercase;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
   text-align: center;
-  padding: 1rem;
+}
+
+.entry-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.entry-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.entry-form__field > label {
+  font-size: 12px;
+}
+
+.entry-form__field > :is(input, textarea) {
+  padding: 20px;
+  border: 1px solid var(--color-water-10);
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+}
+
+.entry-form__button-wrapper {
+  display: flex;
+  justify-content: center;
 }
