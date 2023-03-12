@@ -3,8 +3,9 @@ import Header from "./components/Header/Header";
 import EntryForm from "./components/EntryForm/EntryForm";
 import Footer from "./components/Footer/Footer";
 import EntriesSection from "./components/EntriesSection/EntriesSection";
+import { useState } from "react";
 
-/* const initialEntries = [
+const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
@@ -32,15 +33,24 @@ import EntriesSection from "./components/EntriesSection/EntriesSection";
     motto: "I'm a React Developer",
     notes: "My React-ion when I learned about React: Yay!",
   },
-]; */
+];
 
 function App() {
+  const [entries, setEntries] = useState(initialEntries);
+
+  function handleAddEntry(newEntry) {
+    const date = new Date().toLocaleDateString("en-us", {
+      dateStyle: "medium",
+    });
+    setEntries([{ ...entries, ...newEntry, date }, ...entries]);
+  }
+
   return (
-    <div>
+    <div className="app">
       <Header />
-      <main>
-        <EntryForm />
-        <EntriesSection />
+      <main className="app__main">
+        <EntryForm onAddEntry={handleAddEntry} />
+        <EntriesSection entries={entries} />
       </main>
       <Footer />
     </div>
